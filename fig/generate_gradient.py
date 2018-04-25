@@ -41,7 +41,7 @@ def main():
     f = open("initial_gradient.json", "w")
     json.dump(abbreviated_gradient, f)
     f.close()
-    shutil.copy("initial_gradient.json", "../../js/initial_gradient.json")
+    shutil.copy("initial_gradient.json", "../js/initial_gradient.json")
     training(td, net, epochs, "norms_during_training_2_layers.json")
     plot_training(
         epochs, "norms_during_training_2_layers.json", 2)
@@ -97,7 +97,7 @@ def plot_training(epochs, filename, num_layers):
     plt.legend(loc="upper right")
     fig_filename = "training_speed_%s_layers.png" % num_layers
     plt.savefig(fig_filename)
-    shutil.copy(fig_filename, "../../images/"+fig_filename)
+    shutil.copy(fig_filename, "../images/"+fig_filename)
     plt.show()
 
 def get_average_gradient(net, training_data):

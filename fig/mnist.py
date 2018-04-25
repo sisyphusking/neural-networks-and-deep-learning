@@ -21,7 +21,9 @@ import numpy as np
 def main():
     training_set, validation_set, test_set = mnist_loader.load_data()
     images = get_images(training_set)
-    plot_rotated_image(images[0])
+    # plot_rotated_image(images[0])
+    plot_features(images[0])
+
 
 #### Plotting
 def plot_images_together(images):
